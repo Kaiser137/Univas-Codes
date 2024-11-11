@@ -1,0 +1,15 @@
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print("Seu tamanho eh: ")
+print(len(lista))
+print("os números em ordem (original e inversa) eh: ")
+print(lista)
+print(lista[::-1])
+print("os 3 últimos números sao: ")
+print(lista[-4:-1])
+print("o maior numero eh: ")
+lista.sort()
+print(lista[-1])
+print("o menor numero eh: ")
+lista.reverse()
+print(lista[-1])
