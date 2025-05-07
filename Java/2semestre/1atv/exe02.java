@@ -2,35 +2,40 @@ package Segundo_Semestre;
 
 import java.util.Random;
 
-public class exe01 {
+public class exe02 {
 
     public static void main(String[] args){
-        String[] array_meses = new String[12];
         Random random = new Random();
+        int[] par = new int[10];
+        int[] impar = new int[10];
 
-        array_meses[0] = "Janeiro";
-        array_meses[1] = "Fevereiro";
-        array_meses[2] = "Março";
-        array_meses[3] = "Abril";
-        array_meses[4] = "Maio";
-        array_meses[5] = "Junho";
-        array_meses[6] = "Julho";
-        array_meses[7] = "Agosto";
-        array_meses[8] = "Setembro";
-        array_meses[9] = "Outubro";
-        array_meses[10] = "Novembro";
-        array_meses[11] = "Dezembro";
+        int p = 0;
+        int im = 0;
 
-        int ind = random.nextInt(12);
-        System.out.println(array_meses[ind] + " // esse é um mês sozinho!");
-
-        System.out.println("Abaixo são os meses aleatóriamente!");
-
-
-        for(int i = 0; i < 12; i++){
-            int indice = random.nextInt(12);
-            System.out.println(array_meses[indice]);
+        while(p < 10 || im < 10){
+            int indice = random.nextInt(19) + 1;
+            if (indice % 2 == 0 && p < 10){
+                par[p] = indice;
+                p++;
+            }
+            else if(indice % 2 != 0 && im < 10){
+                impar[im] = indice;
+                im++;
+            }
         }
+
+        for(int i = 0; i < 10; i++){
+            if(par[i] > 0){
+                System.out.println("O numero par na posicao "+ i +" eh: "+ par[i]);
+            }
+        }
+
+        for(int i = 0; i < 10; i++){
+            if(impar[i] > 0){
+                System.out.println("O numero impar na posicao "+ i +" eh: "+ impar[i]);
+            }
+        }
+
     }
 
 }
