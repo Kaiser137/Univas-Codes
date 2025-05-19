@@ -51,7 +51,7 @@ public class trabalho {
     }
     public static void exibirSoma(int vetor[]){
          System.out.println("A soma dos numeros do vetor é: ");
-        int soma = somaRecursiva(vetor, 0);
+        int soma = somarNumeros(vetor, 0);
         System.out.println(soma);
         System.out.println("------------------------------------------------------------");
 }
