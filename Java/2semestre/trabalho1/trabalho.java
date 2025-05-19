@@ -22,7 +22,24 @@ public class trabalho {
         }
         return vetor;
     }
+    public static int somarNumeros(int vetor[], int index) {
+        if (index >= vetor.length) {
+            return 0;
+        }
+        return vetor[index] + somarNumeros(vetor, index + 1);
+    }
+    public static int acharPares(int vetor[], int index) {
+        if (index >= vetor.length) {
+            return 0;
+        }
+        if (vetor[index] % 2 == 0) {
+            return 1 + acharPares(vetor, index + 1);
+        } else {
+            return acharPares(vetor, index + 1);
+        }
+    }
     //----------------------------------------------------------------------------------------------------------------------
+    //-----------------------------------------Área de Exibição-------------------------------------------------------------
 
     public static void exibirNumero(int vetor[]){
         System.out.println("Exibindo todos os numeros do vetor: ");
@@ -33,22 +50,18 @@ public class trabalho {
         System.out.println("------------------------------------------------------------");
     }
     public static void exibirSoma(int vetor[]){
-        System.out.println("A soma dos numeros do vetor é: ");
-        int soma = 0;
-        for(int i = 0; i < vetor.length; i++){
-            soma = soma + vetor[i];
-    }
-    System.out.println(soma);
-    System.out.println("------------------------------------------------------------");
+         System.out.println("A soma dos numeros do vetor é: ");
+        int soma = somaRecursiva(vetor, 0);
+        System.out.println(soma);
+        System.out.println("------------------------------------------------------------");
 }
+    public static void exibirPares(int vetor[]){
+       System.out.println("Os numeros pares do vetor são: ");
+        int qtdPares = acharPares(vetor, 0);
+        System.out.println(qtdPares);
+        System.out.println("------------------------------------------------------------");
+        }
     //----------------------------------------------------------------------------------------------------------------------
-    public static int somarNumeros(int vetor[]){
-        int soma = 0;
-        for(int i = 0; i < vetor.length; i++){
-            soma += vetor[i];
-            }
-            return soma;
-    }
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -64,7 +77,7 @@ public class trabalho {
             } else if (escolha == 2) {
                 exibirSoma(vetorPrincipal);
             }  else if (escolha == 3) {
-
+                exibirPares(vetorPrincipal);
             } else if (escolha == 4) {
 
             } else if (escolha == 5) {
