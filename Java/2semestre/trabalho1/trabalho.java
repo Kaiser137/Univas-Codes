@@ -22,6 +22,7 @@ public class trabalho {
         }
         return vetor;
     }
+    //----------------------------------------------------------------------------------------------------------------------
 
     public static void exibirNumero(int vetor[]){
         System.out.println("Exibindo todos os numeros do vetor: ");
@@ -30,6 +31,23 @@ public class trabalho {
             System.out.println("O numero da posição " + somando + " é: " + vetor[i]);
         }
         System.out.println("------------------------------------------------------------");
+    }
+    public static void exibirSoma(int vetor[]){
+        System.out.println("A soma dos numeros do vetor é: ");
+        int soma = 0;
+        for(int i = 0; i < vetor.length; i++){
+            soma = soma + vetor[i];
+    }
+    System.out.println(soma);
+    System.out.println("------------------------------------------------------------");
+}
+    //----------------------------------------------------------------------------------------------------------------------
+    public static int somarNumeros(int vetor[]){
+        int soma = 0;
+        for(int i = 0; i < vetor.length; i++){
+            soma += vetor[i];
+            }
+            return soma;
     }
 
     public static void main(String[] args){
@@ -44,7 +62,7 @@ public class trabalho {
             if (escolha == 1){
                 exibirNumero(vetorPrincipal);
             } else if (escolha == 2) {
-
+                exibirSoma(vetorPrincipal);
             }  else if (escolha == 3) {
 
             } else if (escolha == 4) {
