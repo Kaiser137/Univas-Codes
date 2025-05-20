@@ -1,3 +1,5 @@
+** Participantes: Cezar Vitor, Igor Gabriel e Rodrigo Marques
+
 O programa deve:
 * Permitir ao usuário inserir a quantidade de números e os respectivos
 valores, armazenando-os em um vetor.
