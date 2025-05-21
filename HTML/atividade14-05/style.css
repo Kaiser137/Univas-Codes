@@ -1,9 +1,14 @@
     body {
         font-family: Arial, sans-serif;
-        background-color: #121212;
+        background-color: #121212 !important;
         color: #fff;
-        margin: 0;
-        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
     }
 
     header {
@@ -13,25 +18,25 @@
     }
 
     .navietor {
-         text-align: center;
-    color: white;
-    background-color: #000000;
-    padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 255, 136, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+        text-align: center;
+        color: white;
+        background-color: #000000;
+        padding: 15px 0;
+        box-shadow: 0 4px 6px rgba(0, 255, 136, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     .navietor a {
-    color: #00ff88;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
+        color: #00ff88;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
 
     h1 {
         margin: 0;
@@ -44,7 +49,7 @@
         padding: 20px;
     }
 
-    section h2{
+    section h2 {
         text-align: center;
         margin: 20px 0;
         font-size: 2em;
@@ -94,41 +99,52 @@
     footer {
         background-color: #000000;
         width: 100%;
-        flex-direction: row;
-        display: inline-flex;
         color: #ffffff;
-        position: fixed;
-        bottom: 0;
+        margin-top: auto;
+        padding: 20px 0;
     }
 
-    .left-footer {
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-
+    .footer .container {
+        margin: 0 auto;
+        max-width: 1200px;
     }
 
     .left-footer img {
-        width: 100px;
+        width: 150px;
         height: auto;
-        margin: 20px;
         border-radius: 10px;
-    }
-
-    .center-footer {
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-    }
-
-    .right-footer {
-        justify-content: center;
-        text-align: center;
-        margin: auto;
     }
 
     .right-footer img {
         width: 35px;
         height: 35px;
-        margin: auto;
+        margin: 0 auto;
+        text-align: middle;
+    }
+
+    .footer .row {
+        min-height: 100px;
+    }
+
+    .right-footer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .center-footer h3 {
+        margin: 0;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+
+    .right-footer img {
+        width: 35px;
+        height: 35px;
+        transition: transform 0.3s ease;
+    }
+
+    .right-footer img:hover {
+        transform: scale(1.1);
     }
