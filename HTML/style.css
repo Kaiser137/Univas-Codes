@@ -1,0 +1,50 @@
+body {
+    background-color: powderblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    padding: 0 100px;
+}
+
+.imagens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagens img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.descricaoColuna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.boxtobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.boxline {
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
+}
+
+.caixavermeia {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
