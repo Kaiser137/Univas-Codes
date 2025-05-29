@@ -28,6 +28,7 @@ public class trabalho {
         }
         return vetor[index] + somarNumeros(vetor, index + 1);
     }
+    
     public static int acharPares(int vetor[], int index) {
         if (index >= vetor.length) {
             return 0;
@@ -50,18 +51,46 @@ public class trabalho {
         System.out.println("------------------------------------------------------------");
     }
     public static void exibirSoma(int vetor[]){
-         System.out.println("A soma dos numeros do vetor é: ");
+        System.out.println("A soma dos numeros do vetor é: ");
         int soma = somarNumeros(vetor, 0);
         System.out.println(soma);
         System.out.println("------------------------------------------------------------");
-}
+    }
     public static void exibirPares(int vetor[]){
-       System.out.println("Os numeros pares do vetor são: ");
+        System.out.println("Os numeros pares do vetor são: ");
         int qtdPares = acharPares(vetor, 0);
         System.out.println(qtdPares);
         System.out.println("------------------------------------------------------------");
-        }
+    }
     //----------------------------------------------------------------------------------------------------------------------
+
+    public static void exibirOrdemInversa(int vetor[]) {
+        System.out.println("Exibindo os números na ordem inversa:");
+        for (int i = vetor.length - 1; i >= 0; i--) {
+            System.out.println("Posição " + (i + 1) + ": " + vetor[i]);
+        }
+        System.out.println("------------------------------------------------------------");
+    }
+
+    public static void buscarNumero(int vetor[], Scanner scanner) {
+        System.out.print("Digite o número que deseja buscar: ");
+        int numero = scanner.nextInt();
+        boolean encontrado = false;
+
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == numero) {
+                System.out.println("Número encontrado na posição " + (i + 1));
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("Número não encontrado no vetor.");
+        }
+
+        System.out.println("------------------------------------------------------------");
+    }
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -79,9 +108,9 @@ public class trabalho {
             }  else if (escolha == 3) {
                 exibirPares(vetorPrincipal);
             } else if (escolha == 4) {
-
+                exibirOrdemInversa(vetorPrincipal);
             } else if (escolha == 5) {
-
+                buscarNumero(vetorPrincipal, scanner);
             } else if (escolha == 0) {
                 fim = fim + 1;
             } else {
