@@ -1,1 +1,55 @@
-https://prod.liveshare.vsengsaas.visualstudio.com/join?97DB414336DB2C867B5CAB1402F1FAB271FC
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Formulário de Cadastro</h1>
+        <p>Preencha os campos abaixo para se cadastrar</p>
+    </div>
+    
+    <form>
+        <label> Nome completo</label>
+        <input name="Nome" type="text" placeholder="Nome"/>
+        <br>
+        
+        <label>E-mail</label>
+        <input name="E-mail" type="email" placeholder="E-mail"/>
+        <br>
+        
+        <div class="radio-container">
+            <label class="radio-title">Gênero</label><br>
+            <div class="radio-controls" style="margin-bottom: 20px;">
+                <input class="radio-button" name="genero" value="masc" type="radio" id="masc">
+                <label for="masc">Masculino</label>
+        
+                <input class="radio-button" name="genero" value="fem" type="radio" id="fem">
+                <label for="fem">Feminino</label>
+            </div>
+        
+            <label class="radio-title">Escolaridade</label><br>
+            <div class="radio-controls">
+                <input class="radio-button" name="escolaridade" value="fund" type="radio" id="fund">
+                <label for="fund">Fundamental</label>
+        
+                <input class="radio-button" name="escolaridade" value="med" type="radio" id="med">
+                <label for="med">Médio</label>
+        
+                <input class="radio-button" name="escolaridade" value="sup" type="radio" id="sup">
+                <label for="sup">Superior</label>
+            </div>
+        </div>
+        
+
+        <label> Nota </label>
+        <input name="nota" type="number" placeholder="Nota de 1 a 5" min="1" max="5"/>
+        <br>
+
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

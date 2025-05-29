@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 20%;
+}
+
+label {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+input{
+    border-color: #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+input:focus{
+    border: 2px solid #00ff88;
+}
+
+.radio-container {
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.radio-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.radio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.radio-button:hover {
+    background-color: #e64a19;
+}
+
+.radio-button:active {
+    background-color: #d84315;
+}
+
+button{
+    background: linear-gradient(#00ff88, #2bac70,#0c0c0c);
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 auto;
+}
+button:hover{
+    background: linear-gradient(#00ff88,#000000);
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+ 
