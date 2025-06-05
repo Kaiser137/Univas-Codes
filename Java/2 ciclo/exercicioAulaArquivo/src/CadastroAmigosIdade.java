@@ -6,7 +6,7 @@ public class CadastroAmigosIdade extends JFrame {
     private JLabel labelNome, labelIdade;
     private JTextField tfNomeAmigo, tfIdadeAmigo;
     private JButton btInserir, btListar;
-    private File pasta = new File("./meusamigos");
+    private File pasta = new File("/meusamigos");
     private File arquivo = new File(pasta, "amigosidade.txt");
 
     public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class CadastroAmigosIdade extends JFrame {
         add(btListar);
 
         btInserir.addActionListener(e -> inserirAmigoIdade());
-        btInserir.addActionListener(e -> listarAmigoIdade());
+        btListar.addActionListener(e -> listarAmigoIdade());
 
         setVisible(true);
     }
@@ -95,6 +95,29 @@ public class CadastroAmigosIdade extends JFrame {
                 JOptionPane.showMessageDialog(this, "Este amigo já está cadastrado.");
                 return;
             } 
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(arquivo, true))) {
+            writer.write(nome + ";" + idade);
+            writer.newLine();
+            JOptionPane.showMessageDialog(this, "Amigo cadastrado com sucesso!");
+            tfNomeAmigo.setText("");
+            tfIdadeAmigo.setText("");
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Erro ao salvar o amigo: " + ex.getMessage());
+        }
+    }
+
+    private void listarAmigoIdade() {
+        List<String[]> amigos = carregarAmigosIdade();
+        if (amigos.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nenhum amigo cadastrado.");
+        } else {
+            String mensagem = "Amigos cadastrados: \n";
+            for (String[] amigo : amigos) {
+                mensagem += "- " + amigo[0] + " (" + amigo[1] + " anos)\n";
+            }
+            JOptionPane.showMessageDialog(this, mensagem);
         }
     }
 }

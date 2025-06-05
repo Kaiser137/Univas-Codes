@@ -1,5 +1,3 @@
-package Segundo_Semestre.Trabalho1;
-
 import java.util.Scanner;
 
 public class trabalho {
