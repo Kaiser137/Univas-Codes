@@ -6,7 +6,7 @@ public class CadastroProduto extends JFrame {
     private JLabel labelCodigoProduto, labelNomeProduto, labelQuantidadeProduto, labelDatadeValidade;
     private JTextField tfCodigoProduto, tfNomeProduto, tfQuantidadeProduto, tfDatadeValidade;
     private JButton btInserirProduto, btListarProduto;
-    private File pasta = new File("./meusamigos");
+    private File pasta = new File("Java/2 ciclo/trabalho3/meusprodutos/");
     private File arquivo = new File(pasta, "produtos.txt");
 
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class CadastroProduto extends JFrame {
 
     public CadastroProduto() {
         setTitle("Cadastro de Produtos");
-        setSize(650, 400);
+        setSize(335, 225);
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -35,11 +35,11 @@ public class CadastroProduto extends JFrame {
         labelNomeProduto.setBounds(10, 55, 150, 20);
         tfNomeProduto.setBounds(10, 75, 300, 20);
         labelQuantidadeProduto.setBounds(10, 100, 150, 20);
-        tfQuantidadeProduto.setBounds(10, 120, 100, 20);
-        labelDatadeValidade.setBounds(10, 145, 150, 20);
-        tfDatadeValidade.setBounds(10, 165, 100, 20);
-        btInserirProduto.setBounds(10, 195, 150, 25);
-        btListarProduto.setBounds(170, 195, 150, 25);
+        tfQuantidadeProduto.setBounds(10, 120, 145, 20);
+        labelDatadeValidade.setBounds(165, 100, 150, 20);
+        tfDatadeValidade.setBounds(165, 120, 145, 20);
+        btInserirProduto.setBounds(10, 150, 145, 25);
+        btListarProduto.setBounds(165, 150, 145, 25);
 
         add(labelCodigoProduto);
         add(tfCodigoProduto);
@@ -98,8 +98,8 @@ public class CadastroProduto extends JFrame {
             return;
         }
 
-        if(pasta.exists()){
-            pasta.mkdir();
+        if(!pasta.exists()){
+            pasta.mkdirs();
         }
 
     List<String[]> produtos = carregarProdutos();
