@@ -129,11 +129,16 @@ public class CadastroProduto extends JFrame {
         if (produtos.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Nenhum produto cadastrado.");
         } else {
-            String mensagem = "Produtos cadastrados: \n";
+            String mensagem = "Produtos: \n";
             for (String[] produto : produtos) {
                 mensagem += "código: " + produto[0] + "; Nome: " + produto[1] + "; Quantidade: " + produto[2] + "; Data de Validade: " + produto[3] + "\n";
             }
-            JOptionPane.showMessageDialog(this, mensagem);
+            JTextArea textArea = new JTextArea(mensagem.toString());
+            textArea.setEditable(false);
+            JScrollPane scrollPane = new JScrollPane(textArea);
+            scrollPane.setPreferredSize(new java.awt.Dimension(350, 250));
+
+            JOptionPane.showConfirmDialog(this, scrollPane, "Produtos Cadastrados", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }
