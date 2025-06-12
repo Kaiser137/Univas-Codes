@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10-06</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container-videos {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .col-video-grande {
+            width: 100%;
+            max-width: 900px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .col-video-lista {
+            width: 100%;
+            height: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .row-video {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 5px;
+        }
+
+        video {
+            border-radius: 20px;
+        }
+
+        .row-video h2 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .row-video p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .legenda-video {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .card-video {
+            width: auto;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card-video-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .card-video-info h2 {
+            font-size: 16px;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .card-video-info p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-videos">
+        <div class="col-video-grande">
+            <video controls width="900">
+                <source src="flower.webm" type="video/webm" />
+            </video>
+            <h1>Legenda do vídeo grande</h1>
+
+            <div class="card-video">
+                <img src="2098873.svg" alt="Perfil" width="50" height="50">
+                <div class="card-video-info">
+                    <h2>Canal do Zé</h2>
+                    <p>100 mil visualizações</p>
+                </div>
+                <button>Seja membro</button>
+                <button>Inscreva-se</button>
+            </div>
+        </div>
+        <div class="col-video-lista">
+            <div class="row-video">
+                <video width="200">
+                    <source src="flower.webm" type="video/webm" />
+                </video>
+
+                <div class="legenda-video">
+                    <h2>Legenda bacana</h2>
+                    <p>Canal do Zé</p>
+                    <p>100 mil visualizações</p>
+                </div>
+            </div>
+            <div class="row-video">
+                <video width="200">
+                    <source src="flower.webm" type="video/webm" />
+                </video>
+
+                <div class="legenda-video">
+                    <h2>Legenda legal</h2>
+                    <p>Canal do Zé</p>
+                    <p>100 mil visualizações</p>
+                </div>
+            </div>
+            <div class="row-video">
+                <video width="200">
+                    <source src="flower.webm" type="video/webm" />
+                </video>
+
+                <div class="legenda-video">
+                    <h2>Legenda foda</h2>
+                    <p>Canal do Zé</p>
+                    <p>100 mil visualizações</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
