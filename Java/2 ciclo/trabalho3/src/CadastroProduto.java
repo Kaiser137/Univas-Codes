@@ -6,7 +6,7 @@ public class CadastroProduto extends JFrame {
     private JLabel labelCodigoProduto, labelNomeProduto, labelQuantidadeProduto, labelDatadeValidade;
     private JTextField tfCodigoProduto, tfNomeProduto, tfQuantidadeProduto, tfDatadeValidade;
     private JButton btInserirProduto, btListarProduto;
-    private File pasta = new File("Java/2 ciclo/trabalho3/meusprodutos/");
+    private File pasta = new File(".\\meusprodutos");
     private File arquivo = new File(pasta, "produtos.txt");
 
     public static void main(String[] args) {
