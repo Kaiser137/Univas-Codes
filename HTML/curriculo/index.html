@@ -1,105 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currículo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      margin: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
 
-    .sidebar {
-      width: 25%;
-      background-color: #f0f0f0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
 
-    .main {
-      width: 75%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+        .sidebar {
+            width: 100%;
+            max-width: 300px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
+        .foto-perfil {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
 
-    .section {
-      margin-bottom: 20px;
-    }
+        .main {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
 
-    .item {
-      margin-bottom: 10px;
-    }
+        h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
 
-    .item-title {
-      font-weight: bold;
-    }
+        .section {
+            margin-bottom: 20px;
+        }
 
-    .item-year {
-      font-style: italic;
-      color: #666;
-    }
+        .item {
+            margin-bottom: 10px;
+        }
 
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-  </style>
+        .item-title {
+            font-weight: bold;
+        }
+
+        .item-year {
+            font-style: italic;
+            color: #666;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-  <div class="sidebar">
-    <h2>Rodrigo Marques de castro</h2>
-    <p> rodrigomarquescastro@hotmail.com<br/>Telefone: (00) 0000-0000<br/>Idade: 27<br/>Estiva-MG</p>
-    <div class="section">
-        <h3>Skills</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li>HTML <span class="stars">★★☆☆☆</span></li>
-          <li>CSS <span class="stars">★★☆☆☆</span></li>
-          <li>JavaScript <span class="stars">★☆☆☆☆</span></li>
-          <li>Python <span class="stars">★★☆☆☆</span></li>
-        </ul>
-      </div>
-      
-  </div>
+    <div class="container">
+        <div class="sidebar">
+            <img class="foto-perfil" src="me (2).jpg">
+            <h2>Cezar Vitor Leite Junior</h2>
+            <p>E-mail: <a href="mailto:cezarvitorti@gmail.com">cezarvitorti@gmail.com</a><br/>
+                Github: <a href="https://github.com/Kaiser137">Clique aqui!</a><br/>
+                Linkedin: <a href="https://www.linkedin.com/in/cezar-vitor-leite-junior-6198402ab/">Clique aqui!</a><br/>
+                Telefone: (35) 99267-7002<br/>
+                Idade: 18<br/>
+                Pouso Alegre-MG</p>
+            <div class="section">
+                <h3>Skills</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>HTML <span class="stars">★★★★☆</span></li>
+                    <li>CSS <span class="stars">★★★★☆</span></li>
+                    <li>Python <span class="stars">★★☆☆☆</span></li>
+                    <li>GDScript <span class="stars">★☆☆☆☆</span></li>
+                </ul>
+            </div>
+        </div>
 
-  <div class="main">
-    <div class="section">
-      <h2>Acadêmico</h2>
-      <div class="item">
-        <div class="item-title">Curso Tcnico em informatica - Senac-MG</div>
-        <div class="item-year">20/03/2023 - 10/09/2024 - Finalizado</div>
-        <div class="item-desc">Curso tecnico em informativa.</div>
+        <div class="main">
+            <div class="section">
+                <h2>Acadêmico</h2>
+                <div class="item">
+                    <div class="item-title">Técnico em Informatica integrado ao Ensino Médio</div>
+                    <div class="item-year">20/03/2021 - 18/12/2023 - Finalizado</div>
+                    <div class="item-desc">IFSULDEMINAS - Campus Pouso Alegre</div>
+                </div>
+                <div class="item">
+                    <div class="item-title">Sistemas de Informação</div>
+                    <div class="item-year">02/2024 - Em andamento</div>
+                    <div class="item-desc">Universidade do Vale do Sapucaí</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Profissional</h2>
+                <div class="item">
+                    <div class="item-title">Estágio obrigatório</div>
+                    <div class="item-year">01/2023 - 03/2023</div>
+                    <div class="item-desc">Estagiário da G-Tork Automação Comercial, atuando em manutenção de Hardware,
+                        aplicativos de escritório e nota fiscal.</div>
+                </div>
+                <div class="item">
+                    <div class="item-title">Estágio não obrigatório</div>
+                    <div class="item-year">06/2024 - Presente</div>
+                    <div class="item-desc">Estagiário do Instituto Federal do Sul de Minas Gerais - Reitoria no setor da
+                        Diretoria de Comunicação. Atuo em projetos de Web Design e Atendimento a Redes Sociais.</div>
+                </div>
+                <div class="item">
+                    <div class="item-title">Bolsita de Apoio Técnico de Nível Médio</div>
+                    <div class="item-year">02/2025 - Presente</div>
+                    <div class="item-desc">Bolsita de Apoio Técnico de Nível Médio no projeto EJA / EPT do IFSULDEMINAS
+                        - Campus Pouso Alegre. Atuo em projetos de Web Design utilizando HTML e CSS.</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Projetos</h2>
+                <div class="item">
+                    <div class="item-title"><h3>Atualização da página da Diretoria de Comunicação do IFSULDEMINAS</h3></div>
+                    <div class="item-desc"><h4>Descrição do projeto:</h4>
+                        <p>Remodelagem de algumas páginas do portal institucional do IFSULDEMINAS, além da repaginação total da
+                            página da Diretoria de Comunicação.</p>
+                        <h4>Principais tecnologias utilizadas: </h4>
+                        <p>HTML, CSS, JavaScript e Joomla.</p>
+                        <h4>Acesso ao site:</h4>
+                        <p>O site está disponível clicando <a
+                                href="https://portal.ifsuldeminas.edu.br/index.php/comunicacao">aqui</a> e todo o código está
+                            disponibilizado no meu git hub: <a
+                                href="https://github.com/Kaiser137/IF-Codes/tree/main/Portal%20Institucional">clique aqui</a>!
+                        </p>
+                        <h4>Principais funcionalidades:</h4>
+                        <p> - Otimização;<br>
+                            - Design atual, elegante e sério;<br>
+                            - Atualização de páginas defasadas.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
-        <div class="item">
-        <div class="item-title">Sistemas de Informação - Univas</div>
-        <div class="item-year">02/2024 - Em andamento</div>
-        <div class="item-desc">Cursando Sistemas de Informação na faculdade univas em Pouso Alegre-MG.</div>
-      </div>
-    </div>
-    <div class="section">
-      <h2>Profissional</h2>
-      <div class="item">
-        <div class="item-title">Cargo Coordenador de patio</div>
-        <div class="item-year">2019 - 2022</div>
-        <div class="item-desc">Coordenador de entrada e saida de materiais, administração do gradro de viagem dos funcionario.</div>
-      </div>
-    </div>
-    <div class="section">
-      <h2>Projetos</h2>
-      <div class="item">
-        <div class="item-title">Projeto HTML de montagem de jogos.</div>
-        <div class="item-desc">Site baseado em um site de vendas com catalogo de jogos.</div>
-      </div>
-    </div>
-  </div>
 
 </body>
+
 </html>
