@@ -56,4 +56,8 @@ public class Secretaria {
     public String toCSV() {
         return String.join(";", Integer.toString(idSecretaria), nome, turno);
     }
+
+    public String toString() {
+        return "As informações da Secretaria " + nome + " são: " + idSecretaria + " - " + turno;
+    }
 }

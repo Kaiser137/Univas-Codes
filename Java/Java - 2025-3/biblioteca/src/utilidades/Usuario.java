@@ -1,6 +1,5 @@
 package utilidades;
 import java.sql.Date;
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 
 public class Usuario {
@@ -77,6 +76,6 @@ public class Usuario {
     }
 
     public String toString() {
-        return idUsuario+" - "+ nome + " - " + dataNascimento + " - " + telefone + " - " + email ;
+        return "As informações do Usuário " + nome + " são: " + idUsuario + " - " + dataNascimento + " - " + telefone + " - " + email ;
     }
 }

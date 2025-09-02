@@ -64,7 +64,7 @@ public class Emprestimo {
 
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        return idEmprestimo + " - " + sdf.format(data) + " " + hora + " (" + status + ")";
+        return "As informações do empréstimo são: " + idEmprestimo + " - " + sdf.format(data) + " " + hora + " (" + status + ")";
     }
     
 }

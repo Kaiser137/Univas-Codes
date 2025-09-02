@@ -1,4 +1,4 @@
-package utilidades;
+ package utilidades;
 
 public class Biblioteca {
    private int idBiblioteca;
@@ -62,7 +62,7 @@ public class Biblioteca {
     }
 
     public String toString() {
-        return "Informações da biblioteca:" + nomeBiblioteca + " - " + endereco + " - " + telefone;
+        return "As informações da biblioteca: " + nomeBiblioteca + " são: " + endereco + " - " + telefone;
     }
 }
 
