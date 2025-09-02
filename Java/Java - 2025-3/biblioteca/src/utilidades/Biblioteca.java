@@ -62,7 +62,7 @@ public class Biblioteca {
     }
 
     public String toString() {
-        return "As informações da biblioteca: " + nomeBiblioteca + " são: " + endereco + " - " + telefone;
+        return "As informações da biblioteca " + nomeBiblioteca + " são: " + endereco + " - " + telefone;
     }
 }
 

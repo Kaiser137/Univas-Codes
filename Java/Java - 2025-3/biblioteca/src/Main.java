@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
     System.out.println("-----Instanciando a biblioteca-----\n");
 
-    Biblioteca biblioteca = new Biblioteca(1, "Biblioteca Bem Legal", "Rua dos bobos, 0", "35 98873-9452");
+    Biblioteca biblioteca = new Biblioteca(1, "Boa leitura", "Rua dos bobos, 0", "35 98873-9452");
     System.out.println(biblioteca);
 
     System.out.println("\n-----Instanciando o Livro-----\n");

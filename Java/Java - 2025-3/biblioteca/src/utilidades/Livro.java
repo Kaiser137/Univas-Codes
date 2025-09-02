@@ -48,6 +48,6 @@ public class Livro {
     }
 
     public String toString() {
-        return "Informações do livro: " + nome + " são: " + idLivro + " - " + tema;
+        return "Informações do livro " + nome + " são: " + idLivro + " - " + tema;
     }
 }
