@@ -9,7 +9,7 @@ public class Usuario {
     private String telefone;
     private String email;
 
-    public Usuario(int idUsuario, String nome, Date dataNascimento, String telefone, String email) {
+    public Usuario(int idUsuario, String nome, java.util.Date dataNascimento2, String telefone, String email) {
         this.idUsuario = idUsuario;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -72,10 +72,12 @@ public class Usuario {
 
     public String toCSV() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        return idUsuario + ";" + nome + ";" + sdf.format(dataNascimento) + ";" + telefone + ";" + email;
+        String dataFormatada = (dataNascimento != null) ? sdf.format(dataNascimento) : "";
+        return String.join(";", String.valueOf(idUsuario), nome, dataFormatada, telefone, email);
     }
+    
 
     public String toString() {
-        return "As informações do Usuário " + nome + " são: " + idUsuario + " - " + dataNascimento + " - " + telefone + " - " + email ;
+        return "As informações do Usuário " + nome + " são: " + idUsuario + " - " + dataNascimento + " - " + telefone + " - " + email;
     }
 }

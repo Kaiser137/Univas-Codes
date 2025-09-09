@@ -31,7 +31,7 @@ public class Main {
     java.util.Date utilDate = new java.util.Date();
     java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
     Time horaEmprestimo = new Time(System.currentTimeMillis());
-    Emprestimo emprestimo = new Emprestimo(1, sqlDate, horaEmprestimo, "Ativo");
+    Emprestimo emprestimo = new Emprestimo(1, usuario.getIdUsuario(), livro.getIdLivro(), sqlDate, horaEmprestimo, "Ativo");
 
     System.out.println(emprestimo);
     }
