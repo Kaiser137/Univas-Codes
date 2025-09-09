@@ -1,33 +1,38 @@
 import utilidades.*;
-import util.ManipuladorArquivos;
-import java.util.Date;
-import java.util.List;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.sql.Date;
+import java.sql.Time;
+
 public class Amen {
+
     public static void main(String[] args) {
-        System.out.println("--- Gerenciamento de Usuario ---");
-        List<Usuario> usuario = new ArrayList<>();
-        usuario = ManipuladorArquivos.lerUsuarios();
-        System.out.println("Usuario carregados do arquivo: " + usuario.size());
-        int novoId = ManipuladorArquivos.proximoId("Usuario");
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        Date dataNascimento = null;
-        try {
-            dataNascimento = sdf.parse("15/05/1990");
-        } catch (java.text.ParseException e) {
-            System.out.println("Erro ao converter data de nascimento: " + e.getMessage());
-            return;
-        }
-        Usuario novoUsuario = new Usuario(novoId, "Pedro Silva", dataNascimento, "(35) 99123-4567", "pedro.s@email.com");
-        ManipuladorArquivos.salvarObjeto("Usuario", novoUsuario, 5);
-        System.out.println("Novo usuario salvo: " + novoUsuario.getNome());
-        usuario.add(novoUsuario);
-        System.out.println("\n--- Lista Completa de Usuario ---");
-        for (Usuario u : usuario) {
-            System.out.println(u.toString());
-        }
+    System.out.println("-----Instanciando a biblioteca-----\n");
+
+    Biblioteca biblioteca = new Biblioteca(1, "Boa leitura", "Rua dos bobos, 0", "35 98873-9452");
+    System.out.println(biblioteca);
+
+    System.out.println("\n-----Instanciando o Livro-----\n");
+
+    Livro livro = new Livro(1, "O Pequeno Princeso", "Fantasia");
+    System.out.println(livro);
+
+    System.out.println("\n-----Instanciando o Usuário-----\n");
+
+    Date dataNascimento = Date.valueOf("1998-08-10");
+    Usuario usuario = new Usuario(1, "Neymar", dataNascimento, "(35) 99826-8502", "neymar@gmail.com");
+    System.out.println(usuario);
+
+    System.out.println("\n-----Instanciando a Secretaria-----\n");
+
+    Secretaria secretaria = new Secretaria(1, "Amanda", "Vespertino");
+    System.out.println(secretaria);
+    
+    System.out.println("\n---Instanciando o emprestimo---\n");
+
+    java.util.Date utilDate = new java.util.Date();
+    java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+    Time horaEmprestimo = new Time(System.currentTimeMillis());
+    Emprestimo emprestimo = new Emprestimo(1, usuario.getIdUsuario(), livro.getIdLivro(), sqlDate, horaEmprestimo, "Ativo");
+
+    System.out.println(emprestimo);
     }
 }
-
-
