@@ -96,10 +96,10 @@ public class MenuInicial extends JFrame {
 
     private int getCamposEsperados(String nomeClasse) {
         return switch (nomeClasse) {
-            case "Paciente" -> 5;
-            case "Medico" -> 4;
+            case "Emprestimo" -> 5;
+            case "Livro" -> 4;
             case "Secretaria" -> 3;
-            case "Clinica" -> 4;
+            case "Usuario" -> 4;
             default -> 0;
         };
     }

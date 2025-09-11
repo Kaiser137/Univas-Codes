@@ -1,6 +1,6 @@
 package utilidades;
 
-import java.sql.Date;
+import java.util.Date;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 
@@ -87,9 +87,9 @@ public class Emprestimo {
     }
 
     @Override
+    
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        return "Empréstimo: " + idEmprestimo + " | Usuário: " + idUsuario + " | Livro: " + idLivro +
-               " | Data: " + sdf.format(data) + " " + hora + " | Status: " + status;
+        return idEmprestimo + " - " + sdf.format(data) + " " + hora + " (" + status + ")";
     }
 }

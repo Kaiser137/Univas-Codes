@@ -1,6 +1,9 @@
 package utilidades;
 import java.sql.Date;
 import java.sql.Time;
+import java.util.List;
+
+import util.ManipuladorArquivos;
 
 public class Secretaria {
    private int idSecretaria;
@@ -45,12 +48,13 @@ public class Secretaria {
 
     }
 
-    public void cadastrarEmprestimo(Usuario usuario, Livro livro, Date data, Time hora){
-
+    public void cadastrarEmprestimo(Emprestimo emprestimo){
+        ManipuladorArquivos.salvarObjeto("agendamento",emprestimo,6);
     }
 
-    public void listarEmprestimo(){
-
+    public List<Emprestimo> listarEmprestimos(){
+        List<Emprestimo> todos = ManipuladorArquivos.lerEmprestimos();
+        return todos;
     }
 
     public String toCSV() {

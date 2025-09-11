@@ -1,5 +1,7 @@
-package util;
+package util; 
+
 import utilidades.*;
+
 import javax.swing.*;
 import java.io.*;
 import java.sql.Time;
@@ -188,8 +190,7 @@ public class ManipuladorArquivos {
                 int idEmprestimo = Integer.parseInt(campos[0]);
                 int idUsuario = Integer.parseInt(campos[1]);
                 int idLivro = Integer.parseInt(campos[2]);
-                java.util.Date dataUtil = sdf.parse(campos[3]);
-                java.sql.Date data = new java.sql.Date(dataUtil.getTime());
+                Date data = sdf.parse(campos[3]);
                 Time hora = Time.valueOf(campos[4]);
                 String status = campos[5];
                 lista.add(new Emprestimo(idEmprestimo, idUsuario, idLivro, data, hora, status));

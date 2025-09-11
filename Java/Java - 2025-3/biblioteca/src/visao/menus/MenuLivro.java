@@ -10,7 +10,7 @@ public class MenuLivro extends JFrame {
     public MenuLivro(int idLivro) {
         this.idLivro = idLivro;
 
-        setTitle("Menu Livro - "+this.idLivro);
+        setTitle("Menu Livro - " + this.idLivro);
         setSize(400, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

@@ -8,7 +8,7 @@ import java.awt.*;
 public class TelaCadastroBiblioteca extends JFrame {
 
     public TelaCadastroBiblioteca() {
-        setTitle("Cadastro de Clínica");
+        setTitle("Cadastro de biblioteca");
         setSize(400, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
