@@ -140,8 +140,8 @@ public class ManipuladorArquivos {
             try {
                 int idLivro = Integer.parseInt(campos[0]);
                 String nome = campos[1];
-                String tema = campos[2];
-                lista.add(new Livro(idLivro, nome, tema));
+                String autor = campos[2];
+                lista.add(new Livro(idLivro, nome, autor));
             } catch (Exception e) {
                 System.err.println("Erro ao ler livro: " + Arrays.toString(campos));
             }
