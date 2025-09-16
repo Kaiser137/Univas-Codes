@@ -1,5 +1,10 @@
 package utilidades;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import util.ManipuladorArquivos;
+
 import java.text.SimpleDateFormat;
 
 public class Usuario {
@@ -42,12 +47,35 @@ public class Usuario {
         this.email = novoEmail;
     }
 
-    public void listarEmprestimo(){
-
+    public List<Emprestimo> listarEmprestimo(){
+        List<Emprestimo> todos = ManipuladorArquivos.lerEmprestimos();
+        List<Emprestimo> meus = new ArrayList<>();
+        for (Emprestimo ag : todos) {
+            if (ag.getIdUsuario() == this.idUsuario) {
+                meus.add(ag);
+            }
+        }
+        return meus;
     }
 
-    public void cancelarEmprestimo(int idEmprestimo){
+    public boolean cancelarEmprestimo(int idEmprestimo){
+        List<Emprestimo> emprestimos = ManipuladorArquivos.lerEmprestimos();
+        Emprestimo encontrou = null;
 
+        for (Emprestimo ag : emprestimos) {
+            if (ag.getIdEmprestimo() == idEmprestimo && ag.getIdUsuario() == this.idUsuario) {
+                ag.setStatus("Cancelado");
+                encontrou = ag;
+                break;
+            }
+        }
+
+        if (encontrou!=null) {
+            ManipuladorArquivos.atualizarObjeto("Emprestimo", encontrou.getIdEmprestimo(), encontrou, 6);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public String toCSV() {

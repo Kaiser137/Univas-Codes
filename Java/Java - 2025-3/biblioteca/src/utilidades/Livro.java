@@ -1,5 +1,10 @@
 package utilidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import util.ManipuladorArquivos;
+
 public class Livro {
     private int idLivro;
     private String nome;
@@ -35,12 +40,35 @@ public class Livro {
         this.tema = tema;
     }
 
-    public void atualizarStatusEmprestimo(int idEmprestimo, String novoStatus){
+    public boolean atualizarStatusEmprestimo(int idEmprestimo, String novoStatus){
+        List<Emprestimo> emprestimos = ManipuladorArquivos.lerEmprestimos();
+        Emprestimo encontrou = null;
 
+        for (Emprestimo ag : emprestimos) {
+            if (ag.getIdEmprestimo() == idEmprestimo && ag.getIdLivro() == this.idLivro) {
+                ag.setStatus("Cancelado");
+                encontrou = ag;
+                break;
+            }
+        }
+
+        if (encontrou!=null) {
+            ManipuladorArquivos.atualizarObjeto("Emprestimo", encontrou.getIdEmprestimo(), encontrou, 6);
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    public void listarEmprestimo(){
-
+    public List<Emprestimo> listarEmprestimo(){
+        List<Emprestimo> todos = ManipuladorArquivos.lerEmprestimos();
+        List<Emprestimo> meus = new ArrayList<>();
+        for (Emprestimo ag : todos) {
+            if (ag.getIdLivro() == this.idLivro) {
+                meus.add(ag);
+            }
+        }
+        return meus;
     }
 
      public String toCSV() {

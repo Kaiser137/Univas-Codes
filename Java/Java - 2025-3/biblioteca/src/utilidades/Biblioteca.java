@@ -1,5 +1,7 @@
  package utilidades;
 
+import util.ManipuladorArquivos;
+
 public class Biblioteca {
    private int idBiblioteca;
    private String nomeBiblioteca;
@@ -46,15 +48,15 @@ public class Biblioteca {
     }
 
     public void atualizarBiblioteca(Biblioteca biblioteca){
-
+        ManipuladorArquivos.salvarObjeto("Biblioteca",biblioteca,4);
     }
 
     public void cadastrarLivro(Livro livro){
-
+        ManipuladorArquivos.salvarObjeto("Livro",livro,3);
     }
 
     public void cadastrarSecretaria(Secretaria secretaria){
-
+        ManipuladorArquivos.salvarObjeto("Secretaria",secretaria,3);
     }
 
     public String toCSV() {

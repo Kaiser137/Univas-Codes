@@ -1,9 +1,8 @@
 package utilidades;
-import java.sql.Date;
-import java.sql.Time;
-import java.util.List;
 
+import java.util.List;
 import util.ManipuladorArquivos;
+import controle.UsuarioControle;
 
 public class Secretaria {
    private int idSecretaria;
@@ -41,15 +40,17 @@ public class Secretaria {
     }
 
     public void cadastrarUsuario(Usuario usuario){
-
+        ManipuladorArquivos.salvarObjeto("Usuario", usuario,5);
     }
 
     public void atualizarContatoUsuario(int idUsuario, String telefone, String email){
-
+        Usuario usuario = UsuarioControle.obterUsuario(idUsuario);
+        usuario.atualizarContato(telefone, email);
+        ManipuladorArquivos.atualizarObjeto("Usuario",idUsuario,usuario,5);
     }
 
     public void cadastrarEmprestimo(Emprestimo emprestimo){
-        ManipuladorArquivos.salvarObjeto("agendamento",emprestimo,6);
+        ManipuladorArquivos.salvarObjeto("Emprestimo",emprestimo,6);
     }
 
     public List<Emprestimo> listarEmprestimos(){

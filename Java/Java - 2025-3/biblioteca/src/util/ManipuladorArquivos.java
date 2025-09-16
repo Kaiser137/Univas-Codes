@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ManipuladorArquivos {
-    private static final String DIRETORIO = "dados";
+    private static final String DIRETORIO = "Java/Java - 2025-3/biblioteca/dados";
 
     public static void salvarObjeto(String nomeClasse, Object objeto, int camposEsperados) {
         String linhaCSV = "";
