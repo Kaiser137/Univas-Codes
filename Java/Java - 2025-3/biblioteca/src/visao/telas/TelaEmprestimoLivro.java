@@ -14,7 +14,7 @@ public class TelaEmprestimoLivro extends JFrame {
 
     public TelaEmprestimoLivro(int idSecretaria) {
         setTitle("Agendar Empréstimo");
-        setSize(400, 300);
+        setSize(450, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 

@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ManipuladorArquivos {
-    private static final String DIRETORIO = "Java/Java - 2025-3/biblioteca/dados";
+    private static final String DIRETORIO = "dados";
 
     public static void salvarObjeto(String nomeClasse, Object objeto, int camposEsperados) {
         String linhaCSV = "";
@@ -138,12 +138,14 @@ public class ManipuladorArquivos {
 
     public static List<Livro> lerLivros() {
         List<Livro> lista = new ArrayList<>();
-        for (String[] campos : ler("Livro", 3)) {
+        for (String[] campos : ler("Livro", 5)) {
             try {
                 int idLivro = Integer.parseInt(campos[0]);
                 String nome = campos[1];
-                String autor = campos[2];
-                lista.add(new Livro(idLivro, nome, autor));
+                String tema = campos[2];
+                String autor = campos[3];
+                String isbn = campos[4];
+                lista.add(new Livro(idLivro, nome, tema, autor, isbn));
             } catch (Exception e) {
                 System.err.println("Erro ao ler livro: " + Arrays.toString(campos));
             }

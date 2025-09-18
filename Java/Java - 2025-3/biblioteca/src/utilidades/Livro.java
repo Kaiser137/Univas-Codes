@@ -9,11 +9,15 @@ public class Livro {
     private int idLivro;
     private String nome;
     private String tema;
+    private String autor; 
+    private String isbn;
 
-    public Livro(int idLivro, String nome, String tema) {
+    public Livro(int idLivro, String nome, String tema, String autor, String isbn) {
         this.idLivro = idLivro;
         this.nome = nome;
         this.tema = tema;
+        this.autor = autor;
+        this.isbn = isbn;
     }
 
     public int getIdLivro() {
@@ -38,6 +42,23 @@ public class Livro {
 
     public void setTema(String tema) {
         this.tema = tema;
+    }
+
+    
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public boolean atualizarStatusEmprestimo(int idEmprestimo, String novoStatus){
@@ -75,7 +96,8 @@ public class Livro {
         return String.join(";", Integer.toString(idLivro), nome, tema);
     }
 
-    public String toString() {
+    @Override
+    public String toString() { 
         return "Informações do livro " + nome + " são: " + idLivro + " - " + tema;
     }
 }

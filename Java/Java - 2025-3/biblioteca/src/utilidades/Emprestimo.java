@@ -12,7 +12,6 @@ public class Emprestimo {
     private Time hora;
     private String status;
 
-    // Agora o construtor recebe os 6 parâmetros
     public Emprestimo(int idEmprestimo, int idUsuario, int idLivro, Date data, Time hora, String status) {
         this.idEmprestimo = idEmprestimo;
         this.idUsuario = idUsuario;

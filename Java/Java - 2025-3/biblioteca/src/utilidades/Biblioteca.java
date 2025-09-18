@@ -52,7 +52,7 @@ public class Biblioteca {
     }
 
     public void cadastrarLivro(Livro livro){
-        ManipuladorArquivos.salvarObjeto("Livro",livro,3);
+        ManipuladorArquivos.salvarObjeto("Livro",livro,5);
     }
 
     public void cadastrarSecretaria(Secretaria secretaria){
