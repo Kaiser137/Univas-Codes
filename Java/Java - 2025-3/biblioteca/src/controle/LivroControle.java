@@ -22,7 +22,7 @@ public class LivroControle {
 
         JOptionPane.showMessageDialog(tela, "Livro cadastrado com sucesso!");
         tela.dispose();
-        new MenuBiblioteca();
+        new visao.menus.MenuInicial();
     }
 
     public static Livro obterLivro(int idLivro){

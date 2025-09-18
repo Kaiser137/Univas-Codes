@@ -35,8 +35,8 @@ public class UsuarioControle {
             return;
         }
         int id = ManipuladorArquivos.proximoId("usuario");
-        Usuario p = new Usuario(id, nome, dataNascimento, telefone, email);
-        SecretariaControle.obterSecretaria(idSecretaria).cadastrarUsuario(p);
+        Usuario u = new Usuario(id, nome, dataNascimento, telefone, email);
+        SecretariaControle.obterSecretaria(idSecretaria).cadastrarUsuario(u);
 
         JOptionPane.showMessageDialog(tela, "Usuário cadastrado com sucesso!");
         tela.dispose();
@@ -46,7 +46,7 @@ public class UsuarioControle {
     public static Usuario obterUsuario(int idUsuario){
         List<Usuario> usuarios = ManipuladorArquivos.lerUsuarios();
         Usuario usuario = usuarios.stream()
-            .filter(p -> p.getIdUsuario() == idUsuario)
+            .filter(u -> u.getIdUsuario() == idUsuario)
             .findFirst()
             .orElse(null);
         return usuario;

@@ -86,6 +86,6 @@ public class Usuario {
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        return "As informações do Usuário " + nome + " são: " + idUsuario + " - " + sdf.format(dataNascimento) + " - " + telefone + " - " + email;
+        return nome;
     }
 }

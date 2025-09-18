@@ -1,8 +1,8 @@
 package visao.telas;
 
 import controle.AgendamentoControle;
-import utilidades.Usuario;
-import utilidades.Livro;
+import modelo.Paciente;
+import modelo.Medico;
 import util.ManipuladorArquivos;
 import visao.menus.MenuSecretaria;
 
@@ -10,23 +10,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class TelaEmprestimoLivro extends JFrame {
+public class TelaAgendamentoConsulta extends JFrame {
 
-    public TelaEmprestimoLivro(int idSecretaria) {
-        setTitle("Agendar Empréstimo");
-        setSize(450, 300);
+    public TelaAgendamentoConsulta(int idSecretaria) {
+        setTitle("Agendar Consulta");
+        setSize(400, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        List<Usuario> usuarios = ManipuladorArquivos.lerUsuarios();
-        List<Livro> livros = ManipuladorArquivos.lerLivros();
-        JComboBox<Usuario> cmbUsuario = new JComboBox<>();
-        for (Usuario u : usuarios) {
-            cmbUsuario.addItem(u);
+        List<Paciente> pacientes = ManipuladorArquivos.lerPacientes();
+        List<Medico> medicos = ManipuladorArquivos.lerMedicos();
+        JComboBox<Paciente> cmbPaciente = new JComboBox<>();
+        for (Paciente p : pacientes) {
+            cmbPaciente.addItem(p);
         }
-        JComboBox<Livro> cmbLivro = new JComboBox<>();
-        for (Livro l : livros) {
-            cmbLivro.addItem(l);
+        JComboBox<Medico> cmbMedico = new JComboBox<>();
+        for (Medico m : medicos) {
+            cmbMedico.addItem(m);
         }
         JTextField txtData = new JTextField();
         JTextField txtHora = new JTextField();
@@ -34,11 +34,11 @@ public class TelaEmprestimoLivro extends JFrame {
         JPanel painel = new JPanel(new GridLayout(5, 2, 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        painel.add(new JLabel("Usuário:"));
-        painel.add(cmbUsuario);
+        painel.add(new JLabel("Paciente:"));
+        painel.add(cmbPaciente);
 
-        painel.add(new JLabel("Livro:"));
-        painel.add(cmbLivro);
+        painel.add(new JLabel("Médico:"));
+        painel.add(cmbMedico);
 
         painel.add(new JLabel("Data (dd/MM/yyyy):"));
         painel.add(txtData);
@@ -48,14 +48,12 @@ public class TelaEmprestimoLivro extends JFrame {
 
         JButton btnAgendar = new JButton("Agendar");
         btnAgendar.addActionListener(e -> {
-            Usuario usuarioSelecionado = (Usuario) cmbUsuario.getSelectedItem();
-            Livro livroSelecionado = (Livro) cmbLivro.getSelectedItem();
-            int idUsuario = usuarioSelecionado.getIdUsuario();
-            int idLivro = livroSelecionado.getIdLivro();
+            int idPaciente = Integer.parseInt(cmbPaciente.getSelectedItem().toString().split(" - ")[0]);
+            int idMedico = Integer.parseInt(cmbMedico.getSelectedItem().toString().split(" - ")[0]);
             String data = txtData.getText().trim();
             String hora = txtHora.getText().trim();
 
-            AgendamentoControle.agendarEmprestimo(idUsuario, idLivro, data, hora, this, idSecretaria);
+            AgendamentoControle.agendarConsulta(idPaciente, idMedico, data, hora, this,idSecretaria);
         });
 
         JButton btnVoltar = new JButton("Voltar");

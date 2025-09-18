@@ -13,7 +13,7 @@ public class MenuInicial extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        String[] perfis = {"Biblioteca", "Livro", "Secretaria", "Usuario"};
+        String[] perfis = {"Clínica", "Médico", "Secretaria", "Paciente"};
 
         JPanel painel = new JPanel(new GridLayout(4, 1, 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -26,8 +26,8 @@ public class MenuInicial extends JFrame {
             String perfilSelecionado = (String) comboPerfil.getSelectedItem();
             dispose();
 
-            if ("Biblioteca".equals(perfilSelecionado)) {
-                new MenuBiblioteca();
+            if ("Clínica".equals(perfilSelecionado)) {
+                new MenuClinica();
             } else {
                 selecionarUsuario(perfilSelecionado);
             }
@@ -46,10 +46,10 @@ public class MenuInicial extends JFrame {
 
     private void selecionarUsuario(String perfil) {
         String arquivo = switch (perfil) {
-            case "Biblioteca" -> "Biblioteca";
-            case "Livro" -> "Livro";
+            case "Clínica" -> "Clinica";
+            case "Médico" -> "Medico";
             case "Secretaria" -> "Secretaria";
-            case "Usuario" -> "Usuario";
+            case "Paciente" -> "Paciente";
             default -> null;
         };
 
@@ -87,19 +87,19 @@ public class MenuInicial extends JFrame {
 
         int id = Integer.parseInt(escolha.split("ID: ")[1].replace(")", ""));
         switch (perfil) {
-            case "Biblioteca" -> new MenuBiblioteca();
-            case "Livro" -> new MenuLivro(id);
+            case "Clínica" -> new MenuClinica();
+            case "Médico" -> new MenuMedico(id);
             case "Secretaria" -> new MenuSecretaria(id);
-            case "Paciente" -> new MenuUsuario(id);
+            case "Paciente" -> new MenuPaciente(id);
         }
     }
 
     private int getCamposEsperados(String nomeClasse) {
         return switch (nomeClasse) {
-            case "Emprestimo" -> 5;
-            case "Livro" -> 4;
+            case "Paciente" -> 5;
+            case "Medico" -> 4;
             case "Secretaria" -> 3;
-            case "Usuario" -> 4;
+            case "Clinica" -> 4;
             default -> 0;
         };
     }

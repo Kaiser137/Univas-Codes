@@ -18,9 +18,9 @@ public class MenuLivro extends JFrame {
         JPanel painel = new JPanel(new GridLayout(3, 1, 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        JButton btnAgendamentos = new JButton("Agendamentos");
+        JButton btnEmprestimos = new JButton("Emprestimos");
 
-        JButton btnRegistrar = new JButton("Atualizar Agendamento");
+        JButton btnRegistrar = new JButton("Atualizar Emprestimos");
 
         JButton btnSair = new JButton("Sair");
         btnSair.addActionListener(e -> {
@@ -29,7 +29,7 @@ public class MenuLivro extends JFrame {
         });
 
         painel.add(btnRegistrar);
-        painel.add(btnAgendamentos);
+        painel.add(btnEmprestimos);
         painel.add(btnSair);
 
         add(painel);

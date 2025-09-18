@@ -93,11 +93,11 @@ public class Livro {
     }
 
      public String toCSV() {
-        return String.join(";", Integer.toString(idLivro), nome, tema);
+        return String.join(";", Integer.toString(idLivro), nome, tema, autor, isbn);
     }
 
     @Override
     public String toString() { 
-        return "Informações do livro " + nome + " são: " + idLivro + " - " + tema;
+        return nome;
     }
 }
