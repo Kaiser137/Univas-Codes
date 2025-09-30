@@ -13,7 +13,7 @@ public class MenuInicial extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        String[] perfis = {"Biblioteca", "Livro", "Secretaria", "Usuario"};
+        String[] perfis = {"Biblioteca", "Secretaria"};
 
         JPanel painel = new JPanel(new GridLayout(4, 1, 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -25,12 +25,7 @@ public class MenuInicial extends JFrame {
         btnEntrar.addActionListener(e -> {
             String perfilSelecionado = (String) comboPerfil.getSelectedItem();
             dispose();
-
-            if ("Biblioteca".equals(perfilSelecionado)) {
-                new MenuBiblioteca();
-            } else {
                 selecionarUsuario(perfilSelecionado);
-            }
         });
 
         painel.add(lbl);
@@ -47,9 +42,7 @@ public class MenuInicial extends JFrame {
     private void selecionarUsuario(String perfil) {
         String arquivo = switch (perfil) {
             case "Biblioteca" -> "Biblioteca";
-            case "Livro" -> "Livro";
             case "Secretaria" -> "Secretaria";
-            case "Usuario" -> "Usuario";
             default -> null;
         };
 
@@ -87,19 +80,16 @@ public class MenuInicial extends JFrame {
 
         int id = Integer.parseInt(escolha.split("ID: ")[1].replace(")", ""));
         switch (perfil) {
-            case "Biblioteca" -> new MenuBiblioteca();
-            case "Livro" -> new MenuLivro(id);
+            case "Biblioteca" -> new MenuBiblioteca(id);
             case "Secretaria" -> new MenuSecretaria(id);
-            case "Paciente" -> new MenuUsuario(id);
         }
     }
 
     private int getCamposEsperados(String nomeClasse) {
         return switch (nomeClasse) {
             case "Emprestimo" -> 5;
-            case "Livro" -> 4;
             case "Secretaria" -> 3;
-            case "Usuario" -> 4;
+            case "Biblioteca" -> 4;
             default -> 0;
         };
     }

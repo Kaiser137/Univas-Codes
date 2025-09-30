@@ -21,7 +21,7 @@ public class SecretariaControle {
 
         JOptionPane.showMessageDialog(tela, "Secretaria cadastrada com sucesso!");
         tela.dispose();
-        new visao.menus.MenuBiblioteca();
+        new visao.menus.MenuBiblioteca(id);
     }
 
     public static Secretaria obterSecretaria(int idSecretaria){

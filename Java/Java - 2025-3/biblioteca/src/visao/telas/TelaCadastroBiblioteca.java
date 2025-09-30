@@ -6,8 +6,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TelaCadastroBiblioteca extends JFrame {
+     private int idBibliotecaLogada;
 
-    public TelaCadastroBiblioteca() {
+    public TelaCadastroBiblioteca(int idBiblioteca) {
+        this.idBibliotecaLogada = idBiblioteca;
+        
         setTitle("Cadastro de biblioteca");
         setSize(400, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -38,7 +41,7 @@ public class TelaCadastroBiblioteca extends JFrame {
         JButton btnVoltar = new JButton("Voltar");
         btnVoltar.addActionListener(e -> {
             dispose();
-            new visao.menus.MenuBiblioteca();
+            new visao.menus.MenuBiblioteca(this.idBibliotecaLogada);
         });
 
         painel.add(lblNome); painel.add(txtNome);

@@ -1,35 +1,39 @@
 package visao.telas;
 
-import controle.SecretariaControle;
+import controle.BibliotecaControle;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class TelaCadastroSecretaria extends JFrame {
+public class TelaAtualizaBiblioteca extends JFrame {
      private int idBibliotecaLogada;
 
-    public TelaCadastroSecretaria(int idBiblioteca) {
+    public TelaAtualizaBiblioteca(int idBiblioteca) {
         this.idBibliotecaLogada = idBiblioteca;
-
-        setTitle("Cadastro de Secretaria");
-        setSize(400, 200);
+        
+        setTitle("Cadastro de biblioteca");
+        setSize(400, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JPanel painel = new JPanel(new GridLayout(3, 2, 10, 10));
-        painel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        JPanel painel = new JPanel(new GridLayout(5, 2, 10, 10));
+        painel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Margem
 
         JLabel lblNome = new JLabel("Nome:");
         JTextField txtNome = new JTextField();
 
-        JLabel lblTurno = new JLabel("Turno:");
-        JTextField txtTurno = new JTextField();
+        JLabel lblEndereco = new JLabel("Endereço:");
+        JTextField txtEndereco = new JTextField();
+
+        JLabel lblTelefone = new JLabel("Telefone:");
+        JTextField txtTelefone = new JTextField();
 
         JButton btnSalvar = new JButton("Salvar");
         btnSalvar.addActionListener(e ->
-            SecretariaControle.cadastrarSecretaria(
+            BibliotecaControle.cadastrarBiblioteca(
                 txtNome.getText().trim(),
-                txtTurno.getText().trim(),
+                txtEndereco.getText().trim(),
+                txtTelefone.getText().trim(),
                 this
             )
         );
@@ -41,7 +45,8 @@ public class TelaCadastroSecretaria extends JFrame {
         });
 
         painel.add(lblNome); painel.add(txtNome);
-        painel.add(lblTurno); painel.add(txtTurno);
+        painel.add(lblEndereco); painel.add(txtEndereco);
+        painel.add(lblTelefone); painel.add(txtTelefone);
         painel.add(btnVoltar); painel.add(btnSalvar);
 
         add(painel);

@@ -21,7 +21,7 @@ public class BibliotecaControle {
 
         JOptionPane.showMessageDialog(tela, "Biblioteca cadastrada com sucesso!");
         tela.dispose();
-        new visao.menus.MenuBiblioteca();
+        new visao.menus.MenuBiblioteca(id);
     }
 
     public static Biblioteca obterBiblioteca() {
