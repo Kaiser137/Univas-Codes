@@ -1,0 +1,92 @@
+body {
+    box-sizing: border-box;
+    background-color: black
+}
+
+main {
+    padding: 20px;
+    margin: 20px;
+}
+
+section {
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+}
+
+.sobremim {
+    margin-bottom: 10px;
+}
+
+.nome {
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+}
+
+.foto-desc {
+    display: flex;
+    flex-direction: row; 
+}
+
+.foto {
+    margin: 10px;
+}
+
+.foto-perfil{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.curiosidade{
+    text-align: center;
+    margin: 10px;
+}
+
+.hobby {
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+}
+
+.hobby-desc {
+    margin: 15px;
+}
+
+.lista-hobby {
+    margin: 20px;
+    padding: 10px;
+}
+
+.fotos-hobby {
+    display: flex;
+    flex-direction: column;
+}
+
+#foto-escudo {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.link-hobby {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.link-hobby a{
+    margin: auto;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    color: blue;
+}
+
+.link-hobby a:hover{
+    background-color: black;
+    color: white;
+}
