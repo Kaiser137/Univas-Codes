@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Treinador Pokémon</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1 id="titulo">Painel do Treinador Pokémon</h1>
+  <p id="descricao">
+    Gerencie sua equipe e interaja com os elementos da página.
+  </p>
+
+  <section class="card" id="secao-controles">
+    <h2>Controles</h2>
+    <button id="btnMensagem">Mostrar mensagem</button>
+    <button id="btnAlterarTitulo">Alterar título</button>
+    <button id="btnTema">Trocar cor de fundo</button>
+  </section>
+
+  <section class="card" id="secao-formulario">
+    <h2>Cadastro de Pokémon</h2>
+    <input type="text" id="inputPokemon" placeholder="Nome do Pokémon">
+    <input type="text" id="inputTipo" placeholder="Tipo">
+    <button id="btnAdicionar">Adicionar Pokémon</button>
+  </section>
+
+  <section class="card" id="secao-lista">
+    <h2>Equipe atual</h2>
+    <ul id="listaPokemons">
+      <li class="pokemon" data-tipo="elétrico">Pikachu</li>
+      <li class="pokemon" data-tipo="fogo">Charmander</li>
+      <li class="pokemon" data-tipo="água">Squirtle</li>
+    </ul>
+    <button id="btnDestacarPrimeiro">Destacar primeiro</button>
+    <button id="btnRemoverUltimo">Remover último</button>
+  </section>
+
+  <section class="card" id="secao-detalhes">
+    <h2>Detalhes</h2>
+    <img id="imagemPokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pokémon inicial">
+    <p id="infoPokemon" data-status="ativo">Pokémon selecionado: Pikachu</p>
+    <a id="linkPokedex" href="https://pokeapi.co/" target="_blank">Abrir Pokédex</a>
+  </section>
+
+  <section class="card" id="secao-eventos">
+    <h2>Área de eventos</h2>
+    <div id="areaMouse" style="width: 220px; height: 100px; border: 1px solid black; display: flex; align-items: center; justify-content: center;">
+      Passe o mouse aqui
+    </div>
+    <p id="textoTeclado">Nenhuma tecla pressionada ainda.</p>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
