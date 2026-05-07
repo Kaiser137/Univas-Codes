@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Inscrição em eventos</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form id="formInscricao">
+            <div>
+                Nome completo: <input type="text" id="nomeCompleto"><br>
+                <small id="erronomeCompleto" style="color: red;"></small><br>
+
+                E-mail: <input type="email" id="email"><br>
+                <small id="erroemail" style="color: red;"></small><br>
+
+                Senha: <input type="password" id="senha"><br>
+                <small id="errosenha" style="color: red;"></small><br>
+
+                Data de Nascimento: <input type="date" id="dataNascimento"><br>
+                <small id="errodataNascimento" style="color: red;"></small><br>
+
+                Horário preferido: <input type="time" id="horarioPreferido"><br>
+                <small id="errohorarioPreferido" style="color: red;"></small><br>
+
+                Github ou portfólio: <input type="url" id="githubPortfolio"><br>
+                <small id="errogithubPortfolio" style="color: red;"></small><br>
+
+                Qual curso deseja fazer:
+                <select id="selectCurso">
+                    <option>Selecione um curso</option>
+                    <option>Curso de Git/Github</option>
+                    <option>Curso de React</option>
+                    <option>Curso de Tailwind</option>
+                </select><br>
+                <small id="errocurso" style="color: red;"></small><br>
+
+                Em qual turno:<br>
+                <input type="radio" id="manha" value="Manhã">Manhã<br>
+                <input type="radio" id="tarde" value="Tarde">Tarde<br>
+                <small id="erroturno" style="color: red;"></small><br>
+
+                Quais são os seus interesses:<br>
+                <input type="checkbox" id="html" value="HTML">HTML<br>
+                <input type="checkbox" id="css" value="CSS">CSS<br>
+                <input type="checkbox" id="js" value="JS">JS<br>
+                <small id="errointeresses" style="color: red;"></small><br>
+
+                Motivação: <textarea cols="20" rows="5" name="motivacao" id="motivacao"></textarea><br>
+                <small id="erromotivacao" style="color: red;"></small><br>
+
+                Termos de licença e uso de imagem:<br>
+                <input type="checkbox" id="termosAceito" value="Eu aceito.">Eu aceito.
+                <input type="checkbox" id="termosNaoAceito" value="Eu nao aceito.">Eu nao aceito.<br>
+                <small id="errotermos" style="color: red;"></small><br>
+
+            </div>
+            <div>
+                <input type="submit" id="submit" value="Enviar">
+                <input type="reset" id="reset" value="Apagar Dados">
+            </div>
+        </form>
+
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

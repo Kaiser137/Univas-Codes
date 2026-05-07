@@ -1,0 +1,10 @@
+<Cube name="Compra" caption="Suprimentos: Compras" visible="true" cache="true" enabled="true">
+
+    <Table name="f_compra"/>
+
+    <DimensionUsage source="Fornecedor" name="Fornecedor" visible="true" foreignKey="id_fornecedor" highCardinality="false"/>
+
+    <Measure name="Qtde Comprada" column="qtde" datatype="Numeric" formatString="#,###" aggregator="sum" visible="true" 
+    description="Quantidade de produtos comprados"/>
+
+</Cube>
