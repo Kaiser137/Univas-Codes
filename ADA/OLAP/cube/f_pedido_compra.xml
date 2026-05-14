@@ -1,0 +1,16 @@
+<Cube name="Pedido de Compra"
+      caption="Suprimentos: Pedidos de Compra"
+      visible="true"
+      cache="true"
+      enabled="true">
+
+      <Table name="f_pedido"/>
+
+<DimensionUsage source="Fornecedor" name="Fornecedor" visible="true" foreignKey="id_fornecedor" highCardinality="false"/>
+<DimensionUsage source="Produtos" name="Produto" visible="true" foreignKey="id_produto" highCardinality="false"/>
+<DimensionUsage source="Data" name="Data" visible="true" foreignKey="id_data" highCardinality="false"/>
+<DimensionUsage source="Local de Armazenamento" name="Local de Armazenamento" visible="true" foreignKey="id_loc_arm" highCardinality="false"/>
+<Measure name="Qtde Pedida" column="qtde_pedido" datatype="Numeric" aggregator="sum" formatString="#,###" visible="true" description="Quantidade Pedida"/>
+<Measure name="Produtos Distintos" column="id_produto" datatype="Numeric" aggregator="distinct-count" formatString="#,###" visible="true" description="Quantidade de Produtos Distintos Pedidos"/>
+<Measure name="Valor Pedido" column="valor_pedido" datatype="Numeric" aggregator="sum" formatString="#,###.00" visible="true" description="Valor Total do Pedido"/>     
+</Cube>
