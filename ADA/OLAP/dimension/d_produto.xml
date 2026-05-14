@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <Dimension name="Produto">
     <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id">
         <Table name="d_produto"/>
@@ -11,3 +12,17 @@
         <Level name="Nome" column="nome" uniqueMembers="true"/>
     </Hierarchy>
 </Dimension>
+=======
+<Dimension name="Fornecedor">
+    <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id">
+        <Table name="d_fornecedor"/>
+        <Level name="Nome" column="nome" approxRowCount="30" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy name="Fornecedor (por Região)" hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id">
+        <Table name="d_fornecedor"/>
+        <Level name="Estado" column="estado" approxRowCount="27" uniqueMembers="true"/>
+        <Level name="Cidade" column="cidade" uniqueMembers="false"/>
+        <Level name="Nome" column="nome" approxRowCount="30" uniqueMembers="false"/>
+    </Hierarchy>
+</Dimension>
+>>>>>>> 2cf9eaae6e35e2e543260c0a14ac58234c080dfb
