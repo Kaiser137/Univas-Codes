@@ -1,0 +1,11 @@
+<Dimension name="Cliente">
+    <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_cliente">
+        <Table name="d_cliente"/>
+        <Level name="Nome" column="nome" uniqueMembers="true"/>
+    </Hierarchy>
+    
+    <Hierarchy name="Cliente (Por ordem alfabética)" hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_cliente">
+        <Table name="d_cliente"/>
+        <Level name="Cliente" column="cliente" uniqueMembers="true"/>
+    </Hierarchy>
+</Dimension>

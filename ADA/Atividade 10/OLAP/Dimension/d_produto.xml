@@ -1,11 +1,11 @@
 <Dimension name="Produto">
-    <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id">
+    <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_produto">
         <Table name="d_produto"/>
         <Level name="Categoria" column="categoria" uniqueMembers="false"/>
         <Level name="Nome" column="nome" uniqueMembers="true"/>
     </Hierarchy>
 
-    <Hierarchy name="Produto (por categoria)" hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id">
+    <Hierarchy name="Produto (por categoria)" hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_produto">
         <Table name="d_produto"/>
         <Level name="Categoria" column="categoria" uniqueMembers="false"/>
         <Level name="Nome" column="nome" uniqueMembers="true"/>

@@ -1,13 +1,14 @@
 <Dimension name="Data">
-        <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_data">
+    <Hierarchy hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_data">
         <Table name="d_data"/>
         <Level name="Ano" column="ano" uniqueMembers="true"/>
         <Level name="Mês" column="mes" uniqueMembers="false"/>
         <Level name="Dia" column="dia" uniqueMembers="false"/>
-        </Hierarchy>
-        <Hierarchy name="Data (Por mês)" hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_data">
+    </Hierarchy>
+    
+    <Hierarchy name="Data (Por mês)" hasAll="true" allMemberName="All" allMemberCaption="(todos)" primaryKey="id_data">
         <Table name="d_data"/>
         <Level name="Ano" column="ano" uniqueMembers="true"/>
         <Level name="Mês" column="mes" uniqueMembers="false"/>
-        </Hierarchy>
+    </Hierarchy>
 </Dimension>
