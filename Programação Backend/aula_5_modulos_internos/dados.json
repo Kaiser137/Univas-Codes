@@ -1,0 +1,20 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Alice",
+      "email": "alice@email.com"
+    },
+    {
+      "id": 2,
+      "nome": "Bob",
+      "email": "novoemail@dominio.com"
+    },
+    {
+      "id": 3,
+      "nome": "Carol",
+      "email": "carol@email.com"
+    }
+  ],
+  "criadoEm": "2025-08-17T16:50:15.559Z"
+}
